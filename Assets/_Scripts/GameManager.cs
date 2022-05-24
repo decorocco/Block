@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public GameState GameState;
-    public static int cubos;
+    public static int cubos = 200;
     public GameObject startUI;
 
     void Awake()
