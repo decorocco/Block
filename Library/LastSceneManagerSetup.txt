@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/MS/Pipes-kit/scene/More_Assets.unity
+- path: Assets/SF Weapons MLX/Shotgun.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
