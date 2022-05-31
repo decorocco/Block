@@ -5,8 +5,8 @@ using UnityEngine;
 public class MenuController : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUi;
-    public GameObject startUi;
+    //public GameObject pauseMenuUi;
+    //public GameObject startUi;
     public static bool GameIsStarting = true;
 
     void Update()
@@ -26,14 +26,14 @@ public class MenuController : MonoBehaviour
     public void Resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        pauseMenuUi.SetActive(false);
+        //pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
-        pauseMenuUi.SetActive(true);
+        //pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -44,42 +44,18 @@ public class MenuController : MonoBehaviour
         Resume();
     }
 
-    public void OnClick2()
-    {
-        GameManager.Instance.ChangeState(GameState.Level2);
-        Resume();
-    }
-
-    public void OnClick3()
-    {
-        GameManager.Instance.ChangeState(GameState.Level3);
-        Resume();
-    }
-
-    public void OnClickTutorial()
-    {
-        GameManager.Instance.ChangeState(GameState.Tutorial);
-        Resume();
-    }
-
-    public void OnClickSandbox()
-    {
-        GameManager.Instance.ChangeState(GameState.Sandbox);
-        Resume();
-    }
-
     public void OnClickMenu()
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
-        pauseMenuUi.SetActive(false);
+        //pauseMenuUi.SetActive(false);
         GameManager.Instance.ChangeState(GameState.TitleMenu);
     }
 
     public void OnClickStart()
     {
         GameIsStarting = false;
-        startUi.SetActive(false);
+        //startUi.SetActive(false);
     }
 
     public void OnClickQuit()

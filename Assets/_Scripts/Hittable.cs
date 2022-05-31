@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-
 public class Hittable : MonoBehaviour
 {
     [SerializeField] private GameObject prefab;

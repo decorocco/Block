@@ -30,19 +30,7 @@ public class GameManager : MonoBehaviour
                 
                 break;
             case GameState.Level1:
-                
-                break;
-            case GameState.Level2:
-                
-                break;
-            case GameState.Level3:
-               
-                break;
-            case GameState.Tutorial:
-                
-                break;
-            case GameState.Sandbox:
-                
+                SceneManager.LoadScene("Office");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -53,9 +41,5 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     TitleMenu = 0,
-    Level1 = 1,
-    Level2 = 2,
-    Level3 = 3,
-    Tutorial = 4,
-    Sandbox = 5
+    Level1 = 1
 }

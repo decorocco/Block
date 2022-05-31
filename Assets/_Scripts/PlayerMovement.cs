@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     Vector3 velocity;
     bool isGrounded;
+    public GameObject notePanel;
 
     void Update()
     {
@@ -34,6 +35,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if (HitNote.isReading)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                notePanel.SetActive(false);
+                HitNote.isReading = false;
+            }
         }
 
         velocity.y += gravity * Time.deltaTime;
