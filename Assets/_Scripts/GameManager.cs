@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Options");
                 break;
             case GameState.GameOver:
-                SceneManager.LoadScene("Options");
+                SceneManager.LoadScene("GameOver");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
