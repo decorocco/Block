@@ -57,12 +57,6 @@ public class MenuController : MonoBehaviour
         GameManager.Instance.ChangeState(GameState.TitleMenu);
     }
 
-    public void OnClickStart()
-    {
-        GameIsStarting = false;
-        //startUi.SetActive(false);
-    }
-
     public void OnClickQuit()
     {
         Application.Quit();

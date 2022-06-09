@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState GameState;
     public static int cubos = 200;
-    public GameObject startUI;
 
     void Awake()
     {
@@ -37,6 +36,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GameOver:
                 SceneManager.LoadScene("GameOver");
+                Cursor.lockState = CursorLockMode.None;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
