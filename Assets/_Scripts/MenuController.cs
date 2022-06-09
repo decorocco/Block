@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     //public GameObject pauseMenuUi;
     //public GameObject startUi;
     public static bool GameIsStarting = true;
+    public static bool LoadMenu = false;
 
     void Update()
     {
@@ -42,6 +43,11 @@ public class MenuController : MonoBehaviour
     {
         GameManager.Instance.ChangeState(GameState.Level1);
         Resume();
+    }
+
+    public void OnClickOptions()
+    {
+        GameManager.Instance.ChangeState(GameState.Options);
     }
 
     public void OnClickMenu()

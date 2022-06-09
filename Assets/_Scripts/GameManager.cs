@@ -27,10 +27,16 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.TitleMenu:
-                
+                SceneManager.LoadScene("TitleMenu");
                 break;
             case GameState.Level1:
-                SceneManager.LoadScene("Office");
+                SceneManager.LoadScene("EikinhoOffice");
+                break;
+            case GameState.Options:
+                SceneManager.LoadScene("Options");
+                break;
+            case GameState.GameOver:
+                SceneManager.LoadScene("Options");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -41,5 +47,7 @@ public class GameManager : MonoBehaviour
 public enum GameState
 {
     TitleMenu = 0,
-    Level1 = 1
+    Level1 = 1,
+    Options = 2,
+    GameOver = 3
 }
