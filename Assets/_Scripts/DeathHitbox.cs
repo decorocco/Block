@@ -7,6 +7,6 @@ public class DeathHitbox : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.ChangeState(GameState.TitleMenu);
+        GameManager.Instance.ChangeState(GameState.GameOver);
     }
 }

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("TitleMenu");
                 break;
             case GameState.Level1:
-                SceneManager.LoadScene("EikinhoOffice");
+                SceneManager.LoadScene("Office");
                 break;
             case GameState.Options:
                 SceneManager.LoadScene("Options");

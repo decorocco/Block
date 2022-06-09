@@ -5,8 +5,7 @@ using UnityEngine;
 public class MenuController : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    //public GameObject pauseMenuUi;
-    //public GameObject startUi;
+    public GameObject pauseMenuUi;
     public static bool GameIsStarting = true;
     public static bool LoadMenu = false;
 
@@ -27,14 +26,14 @@ public class MenuController : MonoBehaviour
     public void Resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        //pauseMenuUi.SetActive(false);
+        pauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
     void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
-        //pauseMenuUi.SetActive(true);
+        pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
