@@ -8,7 +8,6 @@ public class DeathHitboxParticle : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log("gas");
         GameManager.Instance.ChangeState(GameState.GameOver);
     }
 }
