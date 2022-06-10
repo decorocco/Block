@@ -6,6 +6,7 @@ public class MenuController : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUi;
+    public GameObject optionMenuUi;
     public static bool GameIsStarting = true;
     public static bool LoadMenu = false;
 
@@ -27,6 +28,7 @@ public class MenuController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         pauseMenuUi.SetActive(false);
+        optionMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -42,6 +44,18 @@ public class MenuController : MonoBehaviour
     {
         GameManager.Instance.ChangeState(GameState.Level1);
         Resume();
+    }
+
+    public void OnClickOptionsInGame()
+    {
+        pauseMenuUi.SetActive(false);
+        optionMenuUi.SetActive(true);
+    }
+
+    public void OnClickReturn()
+    {
+        pauseMenuUi.SetActive(true);
+        optionMenuUi.SetActive(false);
     }
 
     public void OnClickOptions()

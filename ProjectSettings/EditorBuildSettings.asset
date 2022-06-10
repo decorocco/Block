@@ -5,19 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TitleMenu.unity
     guid: f4cb73a766d126748b68999316790311
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Options.unity
     guid: ae566dec0f9811a4f91eec4cc16fbf48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Office.unity
     guid: 2658efdfc72334d4584d34ed0d1214d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Options.unity
     guid: ae566dec0f9811a4f91eec4cc16fbf48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: d04121eb6de26114c8762b5349645b83
+  - enabled: 1
+    path: Assets/Scenes/EikinhoOffice.unity
+    guid: 5aedd7a5e67c72745b6ca997ffb44b7e
   m_configObjects: {}
