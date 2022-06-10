@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
             case GameState.Level1:
                 SceneManager.LoadScene("Office");
                 break;
+            case GameState.Level2:
+                SceneManager.LoadScene("Office");
+                break;
             case GameState.Options:
                 SceneManager.LoadScene("Options");
                 break;
@@ -48,6 +51,7 @@ public enum GameState
 {
     TitleMenu = 0,
     Level1 = 1,
-    Options = 2,
-    GameOver = 3
+    Level2 = 2,
+    Options = 3,
+    GameOver = 4
 }
