@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class CubeHUD : MonoBehaviour
+public class HeartHUD : MonoBehaviour
 {
+    // Start is called before the first frame update
     public Text textComp;
 
     void Update()
     {
-        textComp.text = $"{GameManager.cubos}";
+        textComp.text = $"{GameManager.lifes} x";
     }
 }

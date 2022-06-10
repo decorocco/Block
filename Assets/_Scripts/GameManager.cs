@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState GameState;
     public static int cubos = 200;
+    public static int lifes = 3;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             case GameState.TitleMenu:
                 SceneManager.LoadScene("TitleMenu");
+                lifes = 3;
                 break;
             case GameState.Level1:
                 SceneManager.LoadScene("Office");

@@ -7,6 +7,15 @@ public class DeathHitbox : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        GameManager.Instance.ChangeState(GameState.GameOver);
+        if (GameManager.lifes < 2) {
+        SceneManager.LoadScene("GameOver");
+
+        } else{
+            GameManager.lifes --;
+            SceneManager.LoadScene("EikinhoOffice");
+        }
+    
     }
+
+
 }
