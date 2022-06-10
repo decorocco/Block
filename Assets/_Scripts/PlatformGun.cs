@@ -11,6 +11,7 @@ public class PlatformGun : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && !MenuController.GameIsPaused)
         {
+
             if (GameManager.cubos > 0)
             {
                 ShootPlatform();
@@ -19,7 +20,6 @@ public class PlatformGun : MonoBehaviour
             else
             {
                 Debug.Log("sem munição");
-                Debug.Log(GameManager.cubos);
             }
         }
 

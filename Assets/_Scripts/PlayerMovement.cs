@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
     Vector3 velocity;
     bool isGrounded;
+    public ParticleSystem _particleSystem;
+
 
     void Update()
     {
