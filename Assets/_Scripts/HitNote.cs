@@ -14,4 +14,16 @@ public class HitNote : MonoBehaviour
             isReading = true;
         }
     }
+
+    public void Update()
+    {
+        if (HitNote.isReading && NotePanel.active)
+        {
+            if (Input.GetButtonDown("Fire2"))
+            {
+                NotePanel.SetActive(false);
+                HitNote.isReading = false;
+            }
+        }
+    }
 }
