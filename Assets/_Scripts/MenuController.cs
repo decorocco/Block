@@ -67,6 +67,7 @@ public class MenuController : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Cursor.lockState = CursorLockMode.None;
         //pauseMenuUi.SetActive(false);
         GameManager.Instance.ChangeState(GameState.TitleMenu);
     }
