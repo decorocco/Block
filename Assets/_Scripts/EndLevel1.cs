@@ -7,6 +7,21 @@ public class EndLevel1 : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Level2");
+        if (GameManager.level == 1)
+        {
+            GameManager.level = 2;
+            SceneManager.LoadScene("Level2");
+        }
+        else if (GameManager.level == 2)
+        {
+            GameManager.level = 3;
+            SceneManager.LoadScene("Level3");
+        }
+        else if (GameManager.level == 3)
+        {
+            GameManager.level = 1;
+            SceneManager.LoadScene("EndGame");
+        }
+        
     }
 }
